@@ -20,7 +20,7 @@ function makeTVList(data){
          preview.forEach((element) => {
          	postCount = postCount+1;
          	//console.log(postCount)
-            if(postCount < 10){
+            if(postCount < 26){
             	const link = element.url;
 	            const title = element.name; 
 	            const thumbPath = element.thumbnailPath;
