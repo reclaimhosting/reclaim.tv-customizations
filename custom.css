@@ -20,3 +20,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+#user-menu, #chat-input {
+  display: none;
+}
