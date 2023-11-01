@@ -26,8 +26,18 @@
 
 /* Hide some stuff we don't need when using Discord chat */
 #chat-input,
-.ant-dropdown-menu,
 #user-menu > span:nth-child(3),
-#chat-modal-user-menu {
+#chat-modal-user-menu,
+body > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) {
   display: none;
+}
+
+/* Mobile only fixes for Discord chat */
+@media (max-width: 767px) {
+  #user-menu {
+    display: none;
+  }
+  .ant-modal-header {
+    min-height: 50px;
+  }
 }
