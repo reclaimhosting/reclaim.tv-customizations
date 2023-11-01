@@ -50,9 +50,26 @@ function checkDiv() {
   if (document.getElementById('virtuoso')) {
     // div exists
     clearInterval(interval); 
+    
     // Get reference to the div element
     const divElement = document.getElementById('virtuoso');
     // Replace the div element with the iframe element
     divElement.replaceWith(iframeElement);
+
+    // Edit User Menu text
+    const userMenu = document.querySelector('#user-menu');
+    const userMenuText = userMenu.querySelector(':nth-child(2)');
+    userMenuText.textContent = 'Chat';
+    
+    // Make user-menu button toggle display of chat
+    document.getElementById("user-menu").onclick = function() {
+      var div = document.getElementById("chat-container");
+      if (div.style.display === "none") {
+        div.style.display = "flex";
+      } else {
+        div.style.display = "none";
+      }
+    };
+    
   }
 }
