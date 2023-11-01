@@ -25,6 +25,9 @@
 }
 
 /* Hide some stuff we don't need when using Discord chat */
-#chat-input, .ant-dropdown-menu, #user-menu > span:nth-child(3){
+#chat-input,
+.ant-dropdown-menu,
+#user-menu > span:nth-child(3),
+#chat-modal-user-menu {
   display: none;
 }
