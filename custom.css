@@ -1,7 +1,10 @@
+// Hide latest-videos-footer, if the video grid is empty.
+// Helps things break "gracefully" when resizing the window.
 #latest-videos:empty + .latest-videos-footer {
   display: none; 
 }
 
+// Style the latest-videos grid
 #latest-videos {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -21,6 +24,7 @@
   }
 }
 
-#user-menu, #chat-input {
+// Hide some stuff we don't need when using Discord chat
+#chat-input, .ant-dropdown-menu, #user-menu > span:nth-child(3){
   display: none;
 }
