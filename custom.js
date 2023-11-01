@@ -1,3 +1,4 @@
+// Pull in Videos from archive.reclaim.tv
 doTheTV();
 
 function doTheTV(){
@@ -34,4 +35,24 @@ function makeTVList(data){
             destination.appendChild(div);
         }           
         });
+}
+
+// Replace Owncast Chat with Discord Chat
+
+// set up iframe
+const iframeElement = document.createElement('iframe');
+iframeElement.src = 'https://e.widgetbot.io/channels/954008116800938044/1106692850470633573';
+iframeElement.height = '100%';
+
+// wait until div with id 'virtuoso' exists, then replace it with discord chat
+var interval = setInterval(checkDiv, 500);
+function checkDiv() {
+  if (document.getElementById('virtuoso')) {
+    // div exists
+    clearInterval(interval); 
+    // Get reference to the div element
+    const divElement = document.getElementById('virtuoso');
+    // Replace the div element with the iframe element
+    divElement.replaceWith(iframeElement);
+  }
 }
