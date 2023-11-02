@@ -1,3 +1,7 @@
+/* 
+Latest Videos
+*/
+
 /* Hide latest-videos-footer, if the video grid is empty.
    Helps things break "gracefully" when resizing the window. */
 #latest-videos:empty+.latest-videos-footer {
@@ -23,6 +27,10 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/*
+Discord Chat
+*/
 
 /* Hide some stuff we don't need when using Discord chat */
 #chat-input,
