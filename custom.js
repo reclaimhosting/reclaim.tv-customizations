@@ -1,3 +1,7 @@
+/*
+Latest Videos
+*/
+
 // Pull in Videos from archive.reclaim.tv
 doTheTV();
 
@@ -37,7 +41,9 @@ function makeTVList(data) {
     });
 }
 
-// Replace Owncast Chat with Discord Chat
+/*
+Discord Chat
+*/
 
 // set up iframe
 const iframeElement = document.createElement('iframe');
