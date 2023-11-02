@@ -1,50 +1,50 @@
 /* Hide latest-videos-footer, if the video grid is empty.
    Helps things break "gracefully" when resizing the window. */
-   #latest-videos:empty + .latest-videos-footer {
-    display: none; 
-  }
-  
-  /* Style the latest-videos grid */
+#latest-videos:empty+.latest-videos-footer {
+  display: none;
+}
+
+/* Style the latest-videos grid */
+#latest-videos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+@media (min-width: 650) {
   #latest-videos {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  @media (min-width: 650) {
-    #latest-videos {
-      grid-template-columns: repeat(2, 1fr);
-    }
+}
+
+@media (min-width: 1000px) {
+  #latest-videos {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  @media (min-width: 1000px) {
-    #latest-videos {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  /* Hide some stuff we don't need when using Discord chat */
-  #chat-input,
-  #user-menu > span:nth-child(3),
-  #chat-modal-user-menu {
-    display: none;
-  }
-  
-  /* Hide User-menu Dropdown on desktop only */
-  @media (min-width: 767px) {
+}
+
+/* Hide some stuff we don't need when using Discord chat */
+#chat-input,
+#user-menu>span:nth-child(3),
+#chat-modal-user-menu {
+  display: none;
+}
+
+/* Hide User-menu Dropdown on desktop only */
+@media (min-width: 767px) {
   .ant-dropdown.ant-dropdown-placement-bottomLeft {
     display: none;
   }
+}
+
+/* Mobile only fixes for Discord chat */
+@media (max-width: 767px) {
+  #user-menu {
+    display: none;
   }
-  
-  /* Mobile only fixes for Discord chat */
-  @media (max-width: 767px) {
-    #user-menu {
-      display: none;
-    }
-    .ant-modal-header {
-      min-height: 50px;
-    }
+
+  .ant-modal-header {
+    min-height: 50px;
   }
-  
+}
