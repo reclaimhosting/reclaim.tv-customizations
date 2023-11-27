@@ -2,7 +2,7 @@
 Latest Videos
 */
 
-/* Hide latest-videos-footer if the video grid is empty.
+/* Hide latest-videos-footer, if the video grid is empty.
    Helps things break "gracefully" when resizing the window. */
 #latest-videos:empty+.latest-videos-footer {
   display: none;
