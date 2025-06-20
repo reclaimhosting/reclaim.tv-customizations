@@ -45,6 +45,34 @@ function makeTVList(data) {
 Discord Chat
 */
 
+// Discord Chat button
+// Create the main container div
+const chatDiv = document.createElement('div');
+chatDiv.className = 'discord-chat-button';
+
+// Create the Discord button
+const discordButton = document.createElement('button');
+discordButton.textContent = 'Discord Chat';
+discordButton.className = 'ant-btn ant-btn-primary ActionButton_button__1rwj4';
+discordButton.onclick = function() {
+    window.open('https://discord.gg/Hg2ArD3hMa', '_blank');
+};
+
+// Append elements to the div
+chatDiv.appendChild(discordButton);
+
+// Append the div to the header element
+const header = document.querySelector('header');
+if (header) {
+    header.appendChild(chatDiv);
+} else {
+    console.error('Header element not found');
+}
+
+
+
+// Widgetbot (currently broken)
+/*
 // set up iframe
 const iframeElement = document.createElement('iframe');
 iframeElement.src = 'https://e.widgetbot.io/channels/954008116800938044/1106692850470633573';
@@ -92,3 +120,4 @@ function checkMobileDiv() {
     };
 
 }
+*/
